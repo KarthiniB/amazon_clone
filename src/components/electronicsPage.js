@@ -1,54 +1,28 @@
-import React, { useEffect } from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import CardActions from "@material-ui/core/CardActions";
-
-export default function ElectronicsPage() {
+import React, { useState, useEffect } from "react";
+import PopUpPage from "./popupPage";
+export default function ElectronicsPage(){
+    const [items, setItems] = useState([]);
     useEffect(()=>{
-        fetch('https://fakestoreapi.com/products/category/jewelery')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-            .catch((error) => console.error('Error fetching data:', error));
-    },[]);
-    return (
-        <div style={{}}>
-            <h4>Electronic Intems</h4>
-            <Card
-                style={{
-                    width: 400,
-                    backgroundColor: "grey",
-                }}
-            >
-                <CardContent>
-                    <Typography
-                        style={{ fontSize: 14 }}
-                        color="textSecondary"
-                        gutterBottom
-                    >
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJc-kxhH7hFPOh4cDOLyfk9oMeGhBclA0pog&s" alt="Company Logo" class="logo"/>
-                        
-                    </Typography>
-                    <Typography variant="h5" component="h2">
-                        How are you ?
-                    </Typography>
-                    <Typography
-                        style={{
-                            marginBottom: 12,
-                        }}
-                        color="textSecondary"
-                    >
-                        Keep Motivated
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                        Stay Happy
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small">Stay Safe.....</Button>
-                </CardActions>
-            </Card>
+        fetch('https://fakestoreapi.com/products/category/electronics')
+        .then((response) => (response.json))
+        .then((json)=>setItems(json))
+        .catch((error)=> console.error('Error fetching items: ', error));
+    }, []);
+    return(
+        <div className="card-container">
+            {items.map((item)=> (
+                <div key={item.id} className="card">
+                    <h3>ID={item.id}</h3>
+                    <h2>{item.title}</h2>
+                    <img src={item.image} alt={item.title} className="item-image"></img>
+                    <p>{item.description}</p>
+                    <p>Price: ${item.price}</p>
+                    <button className="btn">Add to Cart</button>
+                    <br/>
+                    <br/>
+                    <button className="btn" onClick={PopUpPage}>Buy now</button>
+                </div>
+            ))}
         </div>
     );
 }

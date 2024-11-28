@@ -8,9 +8,7 @@ export default function Layout(){
         <Header />
           <section>
             <CategoriesPage />
-                <article>
-                    <Outlet />
-                </article>
+            <Outlet/>
           </section>
         <Footer />
         </>

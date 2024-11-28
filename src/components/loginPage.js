@@ -2,7 +2,7 @@ export default function LoginPage(){
     return(
         <center>
                 <form action="loginPage.js" method="post">
-                    <div className="login-container">
+                    <div className="login">
                         <label for="username"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="uname" required></input>
 
