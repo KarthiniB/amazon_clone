@@ -1,27 +1,21 @@
 import { useEffect, useState} from "react"
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useFetch from "./usefetch";
 
 export default function CategoriesPage(){
 
-    const [categories, setCategories] = useState([]);
-
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products/categories')
-            .then((response)=>response.json())
-            .then((data)=>setCategories(data))
-            .catch((error) => console.error('Error fetching categories:', error));
-        }, []);
+    const [data] = useFetch('https://fakestoreapi.com/products/categories');
     
     return(
         <div className="card-categories-container">
-           {categories.map((categories) => (
-            <div key={categories} className="categories-card">
-                <Link to={categories}>
-                    <button className="btn">View {categories}</button> 
+           {data.map((category) => (
+            <div key={category} className="categories-card">
+                <Link to={category}>
+                    <button className="btn">View {category}</button> 
                 </Link>
-        </div>
-      ))}
+            </div>
+        ))}
         </div>
     );
 }

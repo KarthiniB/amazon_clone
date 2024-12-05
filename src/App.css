@@ -7,15 +7,33 @@
   background-color: #efe1f1;
   color: rgb(87, 15, 121);
   height: 150px;
+  font-size: 50px;
 }
 .logo {
-  height: 80px;
+  height: 120px;
 }
 .company-name {
   flex-grow: 1;
   text-align: center;
   margin: 0;
   font-size: 24px;
+}
+.product-button{
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  color: #777;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.product-button:hover {
+  background-color: #888;
+  color: white;
 }
 .auth-buttons {
   display: flex;
@@ -109,7 +127,7 @@
   height: 100vh; 
   background-color: #f0f0f0;
 }
-.sign-in-form 
+.login-form 
 { 
   background: white; 
   padding: 20px; 
@@ -118,7 +136,7 @@
   width: 300px; 
   align-content: center;
 } 
-.sign-in-form h2 { 
+.login-form h2 { 
   text-align: center;
    margin-bottom: 20px; 
 }
@@ -139,14 +157,14 @@
 form .btn{
   width: 100%; 
   padding: 10px; 
-  background-color: #4CAF50; 
+  background-color: #7331b1; 
   color: white; 
   border: none; 
   border-radius: 5px; 
   cursor: pointer;
 }
 form .btn:hover{
-  background-color: #45a049;
+  background-color: #7331b1;
 }
 
 /* Signout.js */
@@ -161,7 +179,7 @@ form .btn:hover{
   background-color: #f0f0f0;
 }
 
-.sign-out-form {
+.logout-form {
   background: white;
   padding: 20px;
   border-radius: 5px;
@@ -169,7 +187,7 @@ form .btn:hover{
   width: 300px;
 }
 
-.sign-out-form h2 {
+.logout-form h2 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -192,7 +210,7 @@ form .btn:hover{
 form .btn {
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #7331b1;
   color: white;
   border: none;
   border-radius: 5px;
@@ -200,7 +218,7 @@ form .btn {
 }
 
 form .btn:hover {
-  background-color: #45a049;
+  background-color: #7331b1;
 }
 
 
@@ -248,4 +266,32 @@ form .btn:hover {
 .card-container .btn{
   background-color: #555;
   color: white;
+}
+/*product button*/
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
 }

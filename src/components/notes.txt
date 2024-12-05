@@ -1,0 +1,3 @@
+fragment- we map here with the key and it always re renders itself
+Bundle,lazy
+code splitting for better performance optimisation and behaves asynchronously

@@ -1,9 +1,9 @@
 const Footer =() =>{
     return (
     <>
-    <footer class="footer"> 
+    <footer className="footer"> 
 
-    <div class="footer-column"> 
+    <div className="footer-column"> 
             <h3>Contact</h3> 
             <ul> 
                 <li>Email: contact@company.com</li> 
@@ -12,13 +12,13 @@ const Footer =() =>{
             </ul> 
         </div>
 
-        <div class="footer-column"> 
+        <div className="footer-column"> 
             <h3>Follow Us</h3> 
-            <ul class="social-media"> 
-                <li><a href="#" class="social-link"><p>Linkedin</p></a></li> 
-                <li><a href="#" class="social-link"><p>Facebook</p></a></li> 
-                <li><a href="#" class="social-link"><p>Twitter</p></a></li> 
-                <li><a href="#" class="social-link"><p>Instagram</p></a></li> 
+            <ul className="social-media"> 
+                <li><a href="#" className="social-link"><p>Linkedin</p></a></li> 
+                <li><a href="#" className="social-link"><p>Facebook</p></a></li> 
+                <li><a href="#" className="social-link"><p>Twitter</p></a></li> 
+                <li><a href="#" className="social-link"><p>Instagram</p></a></li> 
             </ul> 
         </div>
     </footer>

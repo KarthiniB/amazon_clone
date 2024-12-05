@@ -1,20 +1,22 @@
-export default function LoginPage(){
+export default function LoginPage() {
     return(
-        <center>
-                <form action="loginPage.js" method="post">
-                    <div className="login">
-                        <label for="username"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required></input>
-
-                        <label for="password"><b>Password</b></label>
-                        <input type="text" placeholder="Enter password" name="password" required></input>
-
-                        <button type="submit">Login</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember">Remember me</input>
-                        </label>
-                    </div>
-                </form>
-        </center>
+        <>
+        <body class="login">
+           <div class="login-form"> 
+            <h2>Sign In</h2> 
+            <form> 
+                <div class="form-group"> 
+                    <label for="email">Email:</label> 
+                    <input type="email" id="email" name="email" required/> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="password">Password:</label> 
+                    <input type="password" id="password" name="password" required/>
+                </div> 
+                <button type="submit" class="btn">Log In</button> 
+            </form>  
+          </div>  
+        </body>       
+        </>
     )
 }

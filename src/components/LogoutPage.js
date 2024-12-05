@@ -1,10 +1,18 @@
 export default function LogoutPage(){
-    return (
-        <div className="logout">
-            <h1>Logout Page</h1>
-            <label>
-                You have been logged out
-            </label>
-        </div>
+    return(
+        <>
+         <body className="logout"> 
+            <div class="logout-form"> 
+                <h2>Sign Out</h2> 
+                <form> 
+                    <div class="form-group"> 
+                        <label for="email">Email:</label> 
+                        <input type="email" id="email" name="email" required/> 
+                    </div> 
+                    <button type="submit" class="btn">Sign Out</button> 
+                </form> 
+            </div> 
+        </body>
+        </>
     )
 }
