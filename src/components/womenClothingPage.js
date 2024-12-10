@@ -3,11 +3,11 @@ import useFetch from './usefetch';
 import { useNavigate } from 'react-router-dom';
 
 function WomenclothingPage() {
-  const [data] = useFetch("https://fakestoreapi.com/products/category/women's clothing");
+  const [data] = useFetch(`https://fakestoreapi.com/products/category/women's clothing`);
   const navigate = useNavigate();
 
   const handleAddToCart = (itemId) => {
-    navigate("/cart/${itemId}");
+    navigate(`/cart/${itemId}`);
   };
   
 
@@ -28,7 +28,7 @@ function WomenclothingPage() {
           <img src={item.image} alt={item.title} className="item-image" />
           <p>{item.description}</p>
           <p>Price: ${item.price}</p>
-          <button className='btn' onClick={handleAddToCart}>Add To Cart</button>
+          <button className='btn' onClick={() => handleAddToCart(item.id)}>Add To Cart</button>
         </div>
       ))}
     </div>

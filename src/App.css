@@ -295,3 +295,13 @@ form .btn:hover {
   width: 50px;
   height: 50px;
 }
+.image-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.design-img{
+  background-image: "https://img.freepik.com/free-vector/watercolor-painted-abstract-background_23-2149107118.jpg?uid=R173122274&ga=GA1.1.388254278.1720887067&semt=ais_hybrid";
+}

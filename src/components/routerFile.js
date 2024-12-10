@@ -21,7 +21,7 @@ export default function RouterFile(){
                     <Route path="logoutpage" element = {<LogoutPage />}/>
                     <Route path="products" element = {<ProductButton />}/>
                     <Route path="jewelery" element = {<JewelleryPage />}/>
-                    <Route path="carts?userId=1" element={<CartComp />}/>
+                    <Route path="cart/:id" element={<CartComp />}/>
                     <Route path="electronics" element = {<ElectronicsPage />}/>
                     <Route path="men's clothing" element = {<MenclothingPage />}/>
                     <Route path="women's clothing" element = {<WomenclothingPage />}/>

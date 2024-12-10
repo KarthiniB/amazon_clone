@@ -1,3 +1,13 @@
 fragment- we map here with the key and it always re renders itself
 Bundle,lazy
 code splitting for better performance optimisation and behaves asynchronously
+in advanced react we use empty tag rather than a div bcoz it takes some memeory in the DOM that 
+is more space occupying rather than the empty tag
+
+Fragment - its used in react to wrap lements to a group when we need a single element
+
+npm run build-used to build a build folder for real time project
+RxJS- reactive extension library for reactive programming. 
+It make it easier to compose asynchronous or callback based code.
+
+forward ref-lets your component expose a DOM node to parent component with a ref.
